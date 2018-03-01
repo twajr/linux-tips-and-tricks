@@ -40,7 +40,10 @@
  * 'hostname -f' - to show FQDN - This is stored in /etc/hostname on Rhel
  * 'host' or 'dig' to show resolve of DNS
  * /etc/hosts local file to resolve hosts or override DNS entries
- 
+ * /etc/nsswitch.conf - Controls order of name lookup (files dns)
+ * /etc/services - maps port names to port numbers
+ * Troubleshooting - 'ping, traceroute, netstat, tcpdump, telnet'
+
 ## Jobs
 
  * bg, fg, jobs, and CTRL-Z manage background and foreground processes
@@ -48,6 +51,15 @@
 
 ## Shell Scripting Details
 /etc/shells contains list of available shells - Users initial shell is set in /etc/passwd
+
+## Script details
+
+Scripts begin with the 'Shebang' of #!/bin/bash and then continue with the script commands. The script needs to be executable to a 'chmod 755 myscript.sh' is required before running it.
+
+ ```
+ #!/bin/bash
+ sleep 90
+ ```
 
 ### variables
  * `varname=value` - setting our own values
