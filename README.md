@@ -5,28 +5,51 @@
   * 'cd -'  Takes you back to previous directory
   * '!!' - repeats last command
   * 'history' - displays your command history - '![line number] executes that command again
+  * 'whoami' - shows my ID
+  * '
 
-# File / Directory Permissions
+## File / Directory Permissions
 
  * 'chmod' to change file an directory 'modes'
+ * 'umask' to set default mask for file creation
 
-# User Admin
+## User Admin
 
- /etc/passwd - contains the user information
+ * /etc/passwd - contains the user information
+ * 'useradd username' - Adds users to the system
+ * 'passwd username' - Sets the password for the account
 
-## UIDs and GIDs
- * UIDs
+### UIDs and GIDs
+
+ * UIDs - Users
    * Root account is always UID 0
    * User identifiers 
    * System accounts have UIDs < 1000
- * GIDs
+ * GIDs - Groups
+   * 'groups' command shows members
+   * 'groupadd', 'groupmod', 'groupdel' to manage groups
+   * /etc/group stores the groups
    * GID is listed in /etc/passwd is defauilt group for the account
    * New files will belong to a user's default group
    * Use 'newgrp' to switch between groups
 
-# Bash Scripting Details
+## Networking
 
-## variables
+ * 'ip a s' or 'ip addresss show'
+ * 'ifconfig' - Is deprecated, but is around still, replaced by ip command above
+ * 'hostname -f' - to show FQDN - This is stored in /etc/hostname on Rhel
+ * 'host' or 'dig' to show resolve of DNS
+ * /etc/hosts local file to resolve hosts or override DNS entries
+ 
+## Jobs
+
+ * bg, fg, jobs, and CTRL-Z manage background and foreground processes
+ * Jobs can be managed with either the process ID or job ID
+
+## Shell Scripting Details
+/etc/shells contains list of available shells - Users initial shell is set in /etc/passwd
+
+### variables
  * `varname=value` - setting our own values
    * usage: `foo=bar && echo $foo` (basic)
    * quotes: `greeting='hello world' && echo $greeting` (literal)
