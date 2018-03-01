@@ -52,13 +52,15 @@
 ## Shell Scripting Details
 /etc/shells contains list of available shells - Users initial shell is set in /etc/passwd
 
-## Script details
+## Script basics
 
-Scripts begin with the 'Shebang' of #!/bin/bash and then continue with the script commands. The script needs to be executable to a 'chmod 755 myscript.sh' is required before running it.
+Scripts begin with the 'Shebang' of #!/bin/bash and then continue with the script commands. The script needs to be executable so a 'chmod 755 myscript.sh' is required before running it.
 
  ```
  #!/bin/bash
  sleep 90
+ SERVER_NAME=$(hostname)
+ echo "You are running on ${SERVER_NAME}."
  ```
 
 ### variables
