@@ -4,8 +4,25 @@
 
   * 'cd -'  Takes you back to previous directory
   * '!!' - repeats last command
-  * 
+  * 'history' - displays your command history - '![line number] executes that command again
 
+# File / Directory Permissions
+
+ * 'chmod' to change file an directory 'modes'
+
+# User Admin
+
+ /etc/passwd - contains the user information
+
+## UIDs and GIDs
+ * UIDs
+   * Root account is always UID 0
+   * User identifiers 
+   * System accounts have UIDs < 1000
+ * GIDs
+   * GID is listed in /etc/passwd is defauilt group for the account
+   * New files will belong to a user's default group
+   * Use 'newgrp' to switch between groups
 
 # Bash Scripting Details
 
