@@ -91,7 +91,15 @@ Scripts begin with the 'Shebang' of #!/bin/bash and then continue with the scrip
    * usage `echo $RANDOM`
  * `$LINENO` - returns current line number in bash script
 
-## input
+Demonstrates passing list of similar arguments
+```
+for USER in $@
+do
+  echo "Argument is: $USER"
+done
+```
+
+## Reading STDIN
  * `read varname` - waits for user input and assigns value to `$varname`
    * usage: `echo "What is your name?" && read firstname && echo -e "Hello, $firstname"`
  * `read var1 var2 var3` - allows user to input multiple values
@@ -189,6 +197,9 @@ for name in $names
 do
   echo $name
 done
-
-echo All done
+...
+for COLOR in red green blue
+do
+  echo "COLOR: $COLOR"
+done
 ```
