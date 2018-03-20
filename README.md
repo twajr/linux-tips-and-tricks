@@ -164,6 +164,7 @@ esac
 | -s FILE	| FILE exists and it's size is greater than zero (ie. it is not empty). |
 | -w FILE	| FILE exists and the write permission is granted. |
 | -x FILE	| FILE exists and the execute permission is granted. |
+| -f FILE | FILE exists and is a REGULAR file (ie. it's not a device).|
 
 ## loops
  * You can use `break` and `continue` within loop
