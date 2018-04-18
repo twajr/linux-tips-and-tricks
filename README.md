@@ -1,6 +1,12 @@
 # TESTING
 # linux-tips-and-tricks
 
+## Version Checking
+Ubuntu:
+```
+cat /etc/*release
+```
+
 ## Some basic command line tips
 
   * 'cd -'  Takes you back to previous directory
