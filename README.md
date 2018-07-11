@@ -51,6 +51,15 @@ cat /etc/*release
  * /etc/services - maps port names to port numbers
  * Troubleshooting - 'ping, traceroute, netstat, tcpdump, telnet'
 
+Stop all interfaces using
+```
+sudo /etc/init.d/networking stop
+```
+Configure (edit) your interfaces as you wish, then
+Start them again
+```
+sudo /etc/init.d/networking start
+```
 ### libvirt and Networking
 You can find the network device logical name by the command:
 ```
