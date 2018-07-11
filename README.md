@@ -51,6 +51,12 @@ cat /etc/*release
  * /etc/services - maps port names to port numbers
  * Troubleshooting - 'ping, traceroute, netstat, tcpdump, telnet'
 
+### libvirt and Networking
+You can find the network device logical name by the command:
+```
+sudo lshw -C network
+```
+
 ## Jobs
 
  * bg, fg, jobs, and CTRL-Z manage background and foreground processes
