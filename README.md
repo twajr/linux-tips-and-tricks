@@ -42,6 +42,7 @@ cat /etc/*release
 
 ## Networking
 
+ * 'route -n' 
  * 'ip a s' or 'ip addresss show'
  * 'ifconfig' - Is deprecated, but is around still, replaced by ip command above
  * 'hostname -f' - to show FQDN - This is stored in /etc/hostname on Rhel
@@ -50,6 +51,14 @@ cat /etc/*release
  * /etc/nsswitch.conf - Controls order of name lookup (files dns)
  * /etc/services - maps port names to port numbers
  * Troubleshooting - 'ping, traceroute, netstat, tcpdump, telnet'
+
+The ip route get command is a useful feature that allows you to query the route on which the system will send packets to reach a specified IP address, for example:
+```
+$ ip route get 23.6.118.140 
+23.6.118.140 via 10.0.2.2 dev eth0  src 10.0.2.15 
+cache  mtu 1500 advmss 1460 hoplimit 64 
+```
+In this example, packets to 23.6.118.140 are sent out of the eth0 interface via the gateway 10.0.2.2.
 
 Stop all interfaces using
 ```
