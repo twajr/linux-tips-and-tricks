@@ -52,6 +52,16 @@ cat /etc/*release
  * /etc/services - maps port names to port numbers
  * Troubleshooting - 'ping, traceroute, netstat, tcpdump, telnet'
 
+### iptables
+drop all the rules
+```
+iptables -F
+```
+have a look at the current nat / masq rules
+```
+iptables -t nat -L -v -n
+```
+
 The ip route get command is a useful feature that allows you to query the route on which the system will send packets to reach a specified IP address, for example:
 ```
 $ ip route get 23.6.118.140 
