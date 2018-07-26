@@ -6,7 +6,11 @@ Ubuntu:
 ```
 cat /etc/*release
 ```
-
+## CRON
+Push cron command output to syslog (stops MTA errors)
+```
+0 3 * * * (cmd1;  cmd2) 2>&1 | logger -t mycmd
+```
 ## Some basic command line tips
 
   * 'cd -'  Takes you back to previous directory
