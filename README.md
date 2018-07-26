@@ -52,6 +52,11 @@ cat /etc/*release
  * /etc/services - maps port names to port numbers
  * Troubleshooting - 'ping, traceroute, netstat, tcpdump, telnet'
 
+### MTU
+Dynamically change the MTU size on a NIC.
+```
+ip link set eth0 mtu 1400
+```
 ### iptables
 drop all the rules
 ```
