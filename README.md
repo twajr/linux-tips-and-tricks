@@ -6,17 +6,17 @@ Ubuntu:
 ```
 cat /etc/*release
 ```
-## TCPDUMP
+## tcpdump
 Below are parameters for multicast traffic dumps.
 Specific group:
 ```
-tcpdump -i eth0 -s0 -vv host 239.255.255.250
+tcpdump -i ens3 -s0 -vv host 239.255.255.250
 ```
 All multicast traffic:
 ```
-tcpdump -i eth0 -s0 -vv net 224.0.0.0/4
+tcpdump -i ens3 -s0 -vv net 224.0.0.0/4
 ```
-## CRON
+## cron
 Push cron command output to syslog (stops MTA errors)
 ```
 0 3 * * * (cmd1;  cmd2) 2>&1 | logger -t mycmd
