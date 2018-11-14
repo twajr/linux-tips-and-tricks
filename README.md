@@ -1,5 +1,5 @@
-# Windows
 
+# linux-tips-and-tricks
 
 ## Finding a port and its process:
 
@@ -14,8 +14,6 @@ On Windows:
 > tskill typeyourPIDhere 
 ```
 change tskill for taskkill in git bash
-
-# linux-tips-and-tricks
 
 ## Version Checking
 Ubuntu:
