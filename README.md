@@ -1,4 +1,11 @@
-# TESTING
+# Windows
+
+
+## Finding a port and its process:
+
+  netstat -ano | findstr :3000
+  tskill typeyourPIDhere 
+
 # linux-tips-and-tricks
 
 ## Version Checking
